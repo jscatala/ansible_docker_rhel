@@ -1,0 +1,14 @@
+---
+- name: Docker
+  hosts: 127.0.0.1
+  vars:
+    - docker_yum_repo_url: https://download.docker.com/linux/centos/docker-ce.repo
+    - docker_edition: 'ce'
+    - docker_package_state: latest
+    - docker_install_compose: true
+    - docker_compose_version: "1.17.1"
+    - docker_compose_path: /usr/bin/docker-compose
+
+  roles:
+    - role: ansible-role-docker
+
