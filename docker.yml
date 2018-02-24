@@ -1,6 +1,7 @@
 ---
 - name: Docker
   hosts: 127.0.0.1
+  become: yes
   vars:
     - docker_yum_repo_url: https://download.docker.com/linux/centos/docker-ce.repo
     - docker_edition: 'ce'
